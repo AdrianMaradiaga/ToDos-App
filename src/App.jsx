@@ -1,6 +1,6 @@
-import ToDoList from "./ToDoList";
-import ToDoForm from "./ToDoForm";
-import { ToDos as data } from "./to-dos";
+import ToDoList from "./components/ToDoList";
+import ToDoForm from "./components/ToDoForm";
+import { ToDos as data } from "./data/to-dos";
 import { useState, useEffect } from "react";
 
 
@@ -12,11 +12,11 @@ function App() {
     setToDos(data);
   }, []);
 
-  const createToDo = (todoTitle) => {
+  const createToDo = (todo) => {
         setToDos([...todos, {
-          title: todoTitle,
           id: todos.length,
-          description: "a"
+          title: todo.title,
+          description: todo.description
         }])
   }
 
