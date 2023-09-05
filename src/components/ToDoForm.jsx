@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import {ToDoContext} from '../context/ToDoContext'
 
-function ToDoForm({ createToDo }) {
+function ToDoForm() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const {createToDo} = useContext(ToDoContext)
 
   const handleSubmit = (e) => {
     e.preventDefault();
