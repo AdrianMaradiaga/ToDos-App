@@ -10,7 +10,7 @@ function ToDoList() {
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-3 mx-12 p-4">
       {todos.map((todo) => (
         <ToDoCard key={todo.id} todo={todo} />
       ))}
